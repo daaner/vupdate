@@ -39,8 +39,8 @@
     </li>
   </ul>
 
-  <h3>
+  {{-- <h3>
     <span>Visitors</span>
   </h3>
-  <div id="g1" style="height:180px" class="gauge"></div>
+  <div id="g1" style="height:180px" class="gauge"></div> --}}
 </div>

@@ -1,6 +1,6 @@
 <div class="col-sm-7 col-auto">
   <h2 class="tittle-content-header">
-    <i class="icon-media-record"></i>
+    <i class="icon icon-direction"></i>
     @yield('title', config('app.name', 'Apricot'))
   </h2>
 </div>

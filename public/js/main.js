@@ -289,29 +289,26 @@ head.js("/js/clock/jquery.clock.js", function() {
 
 //-------------------------------------------------------------
 
-head.js("/js/gage/raphael.2.1.0.min.js", "/js/gage/justgage.js", function() {
-
-
-
-    var g1;
-    window.onload = function() {
-        var g1 = new JustGage({
-            id: "g1",
-            value: getRandomInt(0, 1000),
-            min: 0,
-            max: 1000,
-            relativeGaugeSize: true,
-            gaugeColor: "rgba(0,0,0,0.4)",
-            levelColors: "#0DB8DF",
-            labelFontColor : "#ffffff",
-            titleFontColor: "#ffffff",
-            valueFontColor :"#ffffff",
-            label: "VISITORS",
-            gaugeWidthScale: 0.2,
-            donut: true
-        });
-    };
-
-
-
-});
+// head.js("/js/gage/raphael.2.1.0.min.js", "/js/gage/justgage.js", function() {
+//
+//
+//
+//     var g1;
+//     window.onload = function() {
+//         var g1 = new JustGage({
+//             id: "g1",
+//             value: getRandomInt(0, 1000),
+//             min: 0,
+//             max: 1000,
+//             relativeGaugeSize: true,
+//             gaugeColor: "rgba(0,0,0,0.4)",
+//             levelColors: "#0DB8DF",
+//             labelFontColor : "#ffffff",
+//             titleFontColor: "#ffffff",
+//             valueFontColor :"#ffffff",
+//             label: "VISITORS",
+//             gaugeWidthScale: 0.2,
+//             donut: true
+//         });
+//     };
+// });

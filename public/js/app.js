@@ -1,4 +1,4 @@
- 
+
 //BACKGROUND CHANGER
 
   $(function() {
@@ -116,15 +116,14 @@
         });
         return false;
     });
+
     //CLOSE ELEMENT
     $(".gone").click(function() {
-        var collapse_content_close = $(this).attr('href');
-        $(collapse_content_close).hide();
-
-
-
+      var collapse_content_close = $(this).attr('href');
+      $(collapse_content_close).hide();
+      return false;
     });
+
 
 //tooltip
     $('.tooltitle').tooltip();
- 
