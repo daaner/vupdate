@@ -10,71 +10,70 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+    <script type="text/javascript" src="{{ asset('/js/preloader.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/load.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/main.js') }}"></script>
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <script src="{{ asset('js/script.js') }}" defer></script>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/loader-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ asset('ico/minus.png') }}">
 </head>
+
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+  <div id="app">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+    <!-- Preloader -->
+    @include('blocks.preloader')
 
-                    </ul>
+    <!-- TOP NAVBAR -->
+    @include('blocks.top_navbar')
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+    <!-- SIDE MENU -->
+    @include('blocks.side_menu')
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+    <!--  PAPER WRAP -->
+    <div class="wrap-fluid">
+      <div class="container-fluid paper-wrap bevel tlbr">
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+        <div class="row">
+          <div id="paper-top">
+            @include('blocks.paper.top')
+          </div>
+        </div>
+
+        <!-- BREADCRUMB -->
+        @include('blocks.paper.breadcrumbs')
+
+        <div class="content-wrap">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="nest" id="Blank_PageClose">
+                @include('blocks.paper.header')
+                <div class="body-nest" id="Blank_Page_Content">
+                  @yield('content')
                 </div>
+              </div>
             </div>
-        </nav>
+          </div>
+        </div>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        @include('blocks.footer')
+      </div>
+
+      <!-- RIGHT SLIDER CONTENT -->
+      @include('blocks.right_slidebar')
     </div>
+    <!--  END PAPER WRAP -->
+  </div>
 </body>
 </html>
