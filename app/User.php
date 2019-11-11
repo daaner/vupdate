@@ -6,9 +6,11 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use App\Traits\GravatarTrait;
+
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, GravatarTrait;
 
     /**
      * The attributes that are mass assignable.

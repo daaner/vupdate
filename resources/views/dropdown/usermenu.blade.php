@@ -4,7 +4,7 @@
       <img
       alt="Avatar"
       class="admin-pic img-circle"
-      src="http://api.randomuser.me/portraits/thumb/men/10.jpg">
+      src="{{ auth()->user()->avatar_url_or_blank }}" title="{{ auth()->user()->name }}">
       Hi, {{ auth()->user()->name }}
       <b class="caret"></b>
     </a>
