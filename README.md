@@ -1,1 +1,1 @@
-"# vupdate" 
+# Vue auto-update
