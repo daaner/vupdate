@@ -1,7 +1,7 @@
 <div id="skin-select">
-  <a href="/" id="logo">
+  <div id="logo">
     @include('helpers.logo')
-  </a>
+  </div>
 
   <a id="toggle">
     <span class="entypo-menu"></span>

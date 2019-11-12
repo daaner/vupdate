@@ -1,0 +1,74 @@
+.vue-dropdown a {
+  cursor: pointer;
+}
+
+.vue-dropdown > a {
+  line-height: 20px;
+  position: relative;
+  display: block;
+  padding: 15px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.vue-dropdown .d-block {
+  display: block;
+  max-height: 50vh;
+  overflow-y: auto;
+  min-width: 300px;
+}
+
+.vue-dropdown .link a {
+  padding: 0 !important;
+}
+
+.vue-dropdown .dropdown-menu.dropdown-wrap div {
+  width: 100%;
+}
+
+.vue-dropdown ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(221, 221, 221, 0.3);
+  background-color: #ddd;
+  overflow: hidden;
+}
+
+.vue-dropdown ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #ddd;
+}
+
+.vue-dropdown ::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+}
+
+.vue-dropdown .bb {
+  border-bottom: 1px solid #ddd;
+}
+
+.vue-dropdown .info {
+  padding: 0.5rem 1rem 1rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.vue-dropdown .info small {
+  line-height: 1.1;
+  display: block;
+}
+
+.vue-dropdown .info:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #26395a;
+}
+
+.text-white,
+a.text-white,
+a.text-white:hover {
+  color: #ffffff;
+}
+

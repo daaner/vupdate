@@ -20,6 +20,10 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <alert-component />
+        </li>
+
         @include('dropdown.conversation')
         @include('dropdown.tooltitle')
 
